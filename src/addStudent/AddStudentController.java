@@ -1,6 +1,8 @@
 package addStudent;
 
 import entities.Student;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,6 +17,7 @@ public class AddStudentController {
     public TextField txAddress;
     public TextField txId;
     public static Student addStudent;
+    public static ObservableList<Student> listStudent  = FXCollections.observableArrayList();
 
     public void add(ActionEvent actionEvent) {
         try {
@@ -23,6 +26,8 @@ public class AddStudentController {
             String address = txAddress.getText();
             Integer phone = Integer.parseInt(txPhone.getText());
             Student st = new Student(id,name,address,phone);
+            listStudent.add(st);
+            back(null);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }

@@ -17,6 +17,9 @@ public class Student {
     public Integer phone;
     public Button add;
 
+    public Student() {
+    }
+
     public Student(Integer id, String name, String address, Integer phone) {
         this.id = id;
         this.name = name;

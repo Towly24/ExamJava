@@ -5,8 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
-
-<Pane fx:controller="HomeController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
    <children>
       <TableView fx:id="tbStudent" layoutX="14.0" layoutY="87.0" prefHeight="242.0" prefWidth="573.0">
         <columns>
@@ -21,6 +20,8 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Button onAction="#AddStudent" layoutX="461.0" layoutY="341.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="125.0" text="ADD student" />
+      <Button layoutX="461.0" layoutY="341.0" mnemonicParsing="false" onAction="#AddStudent" prefHeight="45.0" prefWidth="125.0" text="ADD student" />
+      <Button layoutX="14.0" layoutY="341.0" mnemonicParsing="false" onAction="#exit" prefHeight="45.0" prefWidth="125.0" text="EXIT" />
+      <Button layoutX="238.0" layoutY="341.0" mnemonicParsing="false" onAction="#save" prefHeight="45.0" prefWidth="125.0" text="SAVE" />
    </children>
 </Pane>
